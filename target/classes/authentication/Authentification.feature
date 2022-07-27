@@ -14,5 +14,5 @@ Feature: Je me connect a l'application  OrangeHRM
 
   @deconnexion
   Scenario: Verifier la deconnexion
-    When Je clique sur licone logout
+    When Je clique sur l icone logout
     And Je clique sur le boutton logout
