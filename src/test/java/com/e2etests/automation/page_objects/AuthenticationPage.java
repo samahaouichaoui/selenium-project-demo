@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
 import com.e2etests.automation.utils.ConfigFileReader;
 import com.e2etests.automation.utils.Setup;
 
@@ -34,8 +33,15 @@ public class AuthenticationPage {
 	}
 
 	/* Create methods */
+	
+	public void goToURL() {
+		Setup.driver.get(configFileReader.getProperties("home.url"));
+		
+	}
+	
 	public void fillUsername(String txt_username) {
 		username.sendKeys(txt_username);
+		
 	}
 
 	public void fillPassword(String txt_password) {
@@ -46,9 +52,7 @@ public class AuthenticationPage {
 		btnLogin.click();
 	}
 
-	public void goToURL() {
-		Setup.driver.get(configFileReader.getProperties("home.url"));
-	}
+	
 	public void clickOniconLogout() {
 		homePage.click();
 	}
